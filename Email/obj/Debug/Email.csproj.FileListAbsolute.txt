@@ -1,0 +1,6 @@
+D:\Project\Code\EmailDll\Email\Email\bin\Debug\Email.dll
+D:\Project\Code\EmailDll\Email\Email\bin\Debug\Email.pdb
+D:\Project\Code\EmailDll\Email\Email\obj\Debug\Email.csproj.CoreCompileInputs.cache
+D:\Project\Code\EmailDll\Email\Email\obj\Debug\Email.dll
+D:\Project\Code\EmailDll\Email\Email\obj\Debug\Email.pdb
+D:\Project\Code\EmailDll\Email\Email\obj\Debug\Email.csprojResolveAssemblyReference.cache
