@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Net;
 using System.Net.Mail;
@@ -10,8 +11,10 @@ namespace Email
 {
     public class InitEmail
     {
+        private String[] attachments = new String[0];
+        public SendCompletedEventHandler SendCompleted;
         //发送Email
-        public Boolean SendEmailToAdmin(String subject, String body)
+        public Boolean SendEmailToAdmin(String subject, String body, List<String> attachments = null)
         {
             MailAddress mailAddress = new MailAddress("nosafe4u@163.com", "I'm Tool", System.Text.Encoding.UTF8);
             MailMessage mailMessage = new MailMessage();
@@ -24,6 +27,12 @@ namespace Email
             mailMessage.Priority = MailPriority.Normal;
             //邮件标题
             mailMessage.Subject = subject;
+            //添加附件
+            if (attachments != null)
+                for (int i = 0; i < attachments.Count; i++)
+                {
+                    mailMessage.Attachments.Add(new System.Net.Mail.Attachment(attachments[i]));
+                }
             //邮件内容
             mailMessage.Body = "[" + DateTime.Now + "]<br>  " + System.Environment.UserName + ":<br>&emsp;&emsp;&emsp;&emsp;" + body;
             //
@@ -32,6 +41,8 @@ namespace Email
             mailMessage.To.Add("dengrui.520@163.com");
             //
             SmtpClient client = new SmtpClient();
+            //发送完毕后回调
+            client.SendCompleted += SendCompleted;
             //
             client.Host = "smtp.163.com";
             client.UseDefaultCredentials = true;
