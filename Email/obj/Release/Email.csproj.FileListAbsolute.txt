@@ -3,4 +3,3 @@ D:\Project\Code\EmailDll\Email\Email\bin\Release\Email.pdb
 D:\Project\Code\EmailDll\Email\Email\obj\Release\Email.csproj.CoreCompileInputs.cache
 D:\Project\Code\EmailDll\Email\Email\obj\Release\Email.dll
 D:\Project\Code\EmailDll\Email\Email\obj\Release\Email.pdb
-D:\Project\Code\EmailDll\Email\Email\obj\Release\Email.csprojResolveAssemblyReference.cache
