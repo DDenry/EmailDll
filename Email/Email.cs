@@ -6,9 +6,9 @@ using System.Net;
 using System.Net.Mail;
 using System.Text;
 
-namespace Email
+namespace DDenry
 {
-    public class InitEmail
+    public class Email
     {
         private String[] attachments = new String[0];
         public SendCompletedEventHandler SendCompleted;
